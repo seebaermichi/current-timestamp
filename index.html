@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Current Timestamp</title>
+
+    <style>
+        body {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            min-height: 80vh;
+        }
+
+        main {
+
+        }
+
+        h1 {
+            color: #9ca3af;
+            font-family: Helvetica, sans-serif;
+            font-size: 1.125rem;
+            letter-spacing: .125rem;
+            line-height: 1.75rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        [data-timestamp] {
+            color: #111827;
+            font-family: "Monaco", monospace;
+            font-size: 4.5rem;
+            letter-spacing: .5rem;
+            line-height: 1;
+            margin: .5rem 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Current timestamp</h1>
+
+        <p data-timestamp></p>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const element = document.querySelector('[data-timestamp]')
+
+            if (element) {
+                element.innerText = Date.now()
+            }
+        })
+    </script>
+</body>
+</html>
